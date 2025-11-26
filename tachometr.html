@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body  class="flex">
+        <h1>Kolečka</h1>
+        <svg width="0" height="0">
+            <defs>
+                <clipPath id="cut-bottom">
+                    <rect x="0" y="0" width="400" height="200" />
+                </clipPath>
+
+                <filter id="f1" width="120" height="120">
+                    <feOffset in="SourceAlpha" dx="5" dy="5" />
+                    <feGaussianBlur stdDeviation="20" />
+                    <feBlend in="SourceGraphic" in2="blurOut" />
+                </filter>
+
+                <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                    <stop offset="0%" stop-color="#101a73" />
+                    <stop offset="50%" stop-color="#0b71de" />
+                    <stop offset="100%" stop-color="#72b0f2" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <div class="container">
+            <div class="flex">
+                <svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="250" x="0" y="0" rx="20" fill="#d3d3d3" />
+
+                    <circle id="kolecko1" cx="200" cy="200" r="180" stroke="url(#grad1)" stroke-width="25" fill="transparent" clip-path="url(#cut-bottom)"/>
+    
+                    <circle cx="200" cy="200" r="150" stroke="black" stroke-width="25" 
+                    stroke-dasharray="471 92.1 3 92.1 3 92.1 3 92.1 3" fill="transparent" clip-path="url(#cut-bottom)"/>
+                    <circle cx="200" cy="200" r="150" stroke="black" stroke-width="15" 
+                    stroke-dasharray="471 46.1 2 92.1 2 92.1 2 92.1 2 92.1 2" fill="transparent" clip-path="url(#cut-bottom)"/>
+                    <circle cx="200" cy="200" r="160" stroke="black" stroke-width="5" 
+                    fill="transparent" clip-path="url(#cut-bottom)"/>
+                    
+                    <line x1="7" y1="200" x2="393" y2="200" stroke="black" stroke-width="4" />
+                    
+                    <text class="vykricnik" id="vykricnik1" x="350" y="60" fill="red">!</text>
+                    <text class="ahodnota" id="ahodnota1" x="200" y="180" fill="green" text-anchor="middle">0</text>
+                    <text id="text1_0" x="70" y="190" fill="black">0</text>
+                    <text id="text1_1" x="85" y="140" fill="black">20</text>
+                    <text id="text1_2" x="145" y="90" fill="black">40</text>
+                    <text id="text1_3" x="225" y="90" fill="black">60</text>
+                    <text id="text1_4" x="285" y="140" fill="black">80</text>
+    
+                </svg><br>
+    
+                <input class="slider" type="range" id="vol1" name="vol" min="0" max="100" value="0"><br>
+                <div class="hodnoty">
+                    <label for="max1">Maximální hodnota:</label>
+                    <input type="number" id="max1" name="max" placeholder="max. hodnota" value="100">
+                    <label for="min1">Minimální hodnota:</label>
+                    <input type="number" id="min1" name="min" placeholder="min. hodnota" value="0">
+                    <label for="high1">Vysoký limit:</label>
+                    <input type="number" id="high1" name="high" placeholder="vysoký limit" value="75"> 
+                    <label for="low1">Nízký limit:</label>
+                    <input type="number" id="low1" name="low" placeholder="nízký limit" value="50">
+                </div>
+            </div>
+            <div class="flex">
+                <svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="250" x="0" y="0" rx="20" fill="#d3d3d3" />
+                    
+                    <circle id="kolecko2" cx="200" cy="200" r="180" stroke="url(#grad1)" stroke-width="25" fill="transparent" clip-path="url(#cut-bottom)"/>
+    
+                    <circle cx="200" cy="200" r="150" stroke="black" stroke-width="25" 
+                    stroke-dasharray="471 92.1 3 92.1 3 92.1 3 92.1 3" fill="transparent" clip-path="url(#cut-bottom)"/>
+                    <circle cx="200" cy="200" r="150" stroke="black" stroke-width="15" 
+                    stroke-dasharray="471 46.1 2 92.1 2 92.1 2 92.1 2 92.1 2" fill="transparent" clip-path="url(#cut-bottom)"/>
+                    <circle cx="200" cy="200" r="160" stroke="black" stroke-width="5" 
+                    fill="transparent" clip-path="url(#cut-bottom)"/>
+                    
+                    <line x1="7" y1="200" x2="393" y2="200" stroke="black" stroke-width="4" />
+                    
+                    <text class="vykricnik" id="vykricnik2" x="350" y="60" fill="red">!</text>
+                    <text class="ahodnota" id="ahodnota2" x="200" y="180" fill="black" text-anchor="middle">0</text>
+                    <text id="text2_0" x="70" y="190" fill="black">0</text>
+                    <text id="text2_1" x="85" y="140" fill="black">20</text>
+                    <text id="text2_2" x="145" y="90" fill="black">40</text>
+                    <text id="text2_3" x="225" y="90" fill="black">60</text>
+                    <text id="text2_4" x="285" y="140" fill="black">80</text>
+    
+                </svg><br>
+    
+                <input class="slider" type="range" id="vol2" name="vol" min="0" max="100" value="0"><br>
+                <div class="hodnoty">
+                    <label for="max2">Maximální hodnota:</label>
+                    <input type="number" id="max2" name="max" placeholder="max. hodnota" value="100">
+                    <label for="min2">Minimální hodnota:</label>
+                    <input type="number" id="min2" name="min" placeholder="min. hodnota" value="0"> 
+                    <label for="high2">Vysoký limit:</label>
+                    <input type="number" id="high2" name="high" placeholder="vysoký limit" value="75"> 
+                    <label for="low2">Nízký limit:</label>
+                    <input type="number" id="low2" name="low" placeholder="nízký limit" value="50">   
+                </div>
+            </div>
+            <div class="flex">
+                <svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="250" x="0" y="0" rx="20" fill="#d3d3d3" />
+
+                    <circle id="kolecko3" cx="200" cy="200" r="180" stroke="url(#grad1)" stroke-width="25" fill="transparent" clip-path="url(#cut-bottom)"/>
+    
+                    <circle cx="200" cy="200" r="150" stroke="black" stroke-width="25" 
+                    stroke-dasharray="471 92.1 3 92.1 3 92.1 3 92.1 3" fill="transparent" clip-path="url(#cut-bottom)"/>
+                    <circle cx="200" cy="200" r="150" stroke="black" stroke-width="15" 
+                    stroke-dasharray="471 46.1 2 92.1 2 92.1 2 92.1 2 92.1 2" fill="transparent" clip-path="url(#cut-bottom)"/>
+                    <circle cx="200" cy="200" r="160" stroke="black" stroke-width="5" 
+                    fill="transparent" clip-path="url(#cut-bottom)"/>
+                    
+                    <line x1="7" y1="200" x2="393" y2="200" stroke="black" stroke-width="4" />
+                    
+                    <text class="vykricnik" id="vykricnik3" x="350" y="60" fill="red">!</text>
+                    <text class="ahodnota" id="ahodnota3" x="200" y="180" fill="black" text-anchor="middle">0</text>
+                    <text id="text3_0" x="70" y="190" fill="black">0</text>
+                    <text id="text3_1" x="85" y="140" fill="black">20</text>
+                    <text id="text3_2" x="145" y="90" fill="black">40</text>
+                    <text id="text3_3" x="225" y="90" fill="black">60</text>
+                    <text id="text3_4" x="285" y="140" fill="black">80</text>
+    
+                </svg><br>
+    
+                <input class="slider" type="range" id="vol3" name="vol" min="0" max="100" value="0"><br>
+                <div class="hodnoty">
+                    <label for="max3">Maximální hodnota:</label>
+                    <input type="number" id="max3" name="max" placeholder="max. hodnota" value="100">
+                    <label for="min3">Minimální hodnota:</label>
+                    <input type="number" id="min3" name="min" placeholder="min. hodnota" value="0">  
+                    <label for="high3">Vysoký limit:</label>
+                    <input type="number" id="high3" name="high" placeholder="vysoký limit" value="75"> 
+                    <label for="low3">Nízký limit:</label>
+                    <input type="number" id="low3" name="low" placeholder="nízký limit" value="50">  
+                </div>
+            </div>
+            <div class="flex">
+                <svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="250" x="0" y="0" rx="20" fill="#d3d3d3" />
+
+                    <circle id="kolecko4" cx="200" cy="200" r="180" stroke="url(#grad1)" stroke-width="25" fill="transparent" clip-path="url(#cut-bottom)"/>
+    
+                    <circle cx="200" cy="200" r="150" stroke="black" stroke-width="25" 
+                    stroke-dasharray="471 92.1 3 92.1 3 92.1 3 92.1 3" fill="transparent" clip-path="url(#cut-bottom)"/>
+                    <circle cx="200" cy="200" r="150" stroke="black" stroke-width="15" 
+                    stroke-dasharray="471 46.1 2 92.1 2 92.1 2 92.1 2 92.1 2" fill="transparent" clip-path="url(#cut-bottom)"/>
+                    <circle cx="200" cy="200" r="160" stroke="black" stroke-width="5" 
+                    fill="transparent" clip-path="url(#cut-bottom)"/>
+                    
+                    <line x1="7" y1="200" x2="393" y2="200" stroke="black" stroke-width="4" />
+
+                    <text class="vykricnik" id="vykricnik4" x="350" y="60" fill="red">!</text>
+                    <text class="ahodnota" id="ahodnota4" x="200" y="180" fill="black" text-anchor="middle">0</text>
+                    <text id="text4_0" x="70" y="190" fill="black">0</text>
+                    <text id="text4_1" x="85" y="140" fill="black">20</text>
+                    <text id="text4_2" x="145" y="90" fill="black">40</text>
+                    <text id="text4_3" x="225" y="90" fill="black">60</text>
+                    <text id="text4_4" x="285" y="140" fill="black">80</text>
+    
+                </svg><br>
+    
+                <input class="slider" type="range" id="vol4" name="vol" min="0" max="100" value="0"><br>
+                <div class="hodnoty">
+                    <label for="max4">Maximální hodnota:</label>
+                    <input type="number" id="max4" name="max" placeholder="max. hodnota" value="100">
+                    <label for="min4">Minimální hodnota:</label>
+                    <input type="number" id="min4" name="min" placeholder="min. hodnota" value="0">
+                    <label for="high4">Vysoký limit:</label>
+                    <input type="number" id="high4" name="high" placeholder="vysoký limit" value="75"> 
+                    <label for="low4">Nízký limit:</label>
+                    <input type="number" id="low4" name="low" placeholder="nízký limit" value="50">    
+                </div>
+            </div>
+        </div>
+
+        <script src="myscripts.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,124 @@
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+svg {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+    margin: 10px;
+}
+
+#kolecko1 {
+    --strokeLength: 1130.5164794921875;
+    --strokeIncrement: 0;
+    --strokeCalc: 0;
+    stroke-dasharray: var(--strokeLength);
+    stroke-dashoffset: var(--strokeCalc);
+    transition: stroke-dashoffset 0.5s ease;
+}
+#kolecko2 {
+    --strokeLength: 1130.5164794921875;
+    --strokeIncrement: 0;
+    --strokeCalc: 0;
+    stroke-dasharray: var(--strokeLength);
+    stroke-dashoffset: var(--strokeCalc);
+    transition: stroke-dashoffset 0.5s ease;
+}
+#kolecko3 {
+  --strokeLength: 1130.5164794921875;
+  --strokeIncrement: 0;
+  --strokeCalc: 0;
+  stroke-dasharray: var(--strokeLength);
+  stroke-dashoffset: var(--strokeCalc);
+  transition: stroke-dashoffset 0.5s ease;
+}
+#kolecko4 {
+  --strokeLength: 1130.5164794921875;
+  --strokeIncrement: 0;
+  --strokeCalc: 0;
+  stroke-dasharray: var(--strokeLength);
+  stroke-dashoffset: var(--strokeCalc);
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.vykricnik {
+  font-size: 60px;
+  animation: blinker 1s infinite;
+  opacity: 0;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.ahodnota {
+  font-size: 40px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 400px;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+
+  .slider::-webkit-slider-thumb:hover {
+    transform: scale(120%);
+    transition: 200ms ease;
+  }
+
+  input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background: #d3d3d3;
+    border: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+  }
+
+  input[type=number]:focus {
+    opacity: 1;
+  }
+
+  .hodnoty {
+    width: 400px;
+  }
